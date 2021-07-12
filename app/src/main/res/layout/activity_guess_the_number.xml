@@ -6,19 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".GuessTheNumberActivity">
 
+
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Игры"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
     <TextView
+        android:layout_below="@+id/toolBarRl"
         android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="title"
+        android:text="Я загадал число от 0 до 1000. Ваш ход."
         android:layout_marginTop="20dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"/>
-    
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:hint="Введите число"/>
+
+    <RelativeLayout
+        android:id="@+id/enterRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTv"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:id="@+id/enterEt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Введите число"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/goIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_play_circle_filled_24"
+            android:layout_toEndOf="@+id/enterEt"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/endTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@+id/enterRl"
+        android:text="Title"
+        android:layout_alignStart="@+id/enterRl"
+        android:layout_marginTop="16dp"/>
 
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 public class GameActivity extends AppCompatActivity {
 
     private ImageView backIv;
-    private Button guessBt;
+    private Button guessBt, RandomNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class GameActivity extends AppCompatActivity {
 
         backIv = findViewById(R.id.backIv);
         guessBt = findViewById(R.id.guessBt);
+        RandomNum = findViewById(R.id.RandomNum);
 
         backIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,13 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GameActivity.this, GuessTheNumberActivity.class);
+                GameActivity.this.startActivity(intent);
+            }
+        });
+        RandomNum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GameActivity.this, RandomNum.class);
                 GameActivity.this.startActivity(intent);
             }
         });

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MyGame</string>
     <string name="guessTheNumber">Угадай число</string>
+    <string name="ahead">Слишком много.</string>
+    <string name="behind">Слишком мало.</string>
+    <string name="hit">Ура!! Ты угадал.</string>
+    <string name="play_more">Сыграть ещё</string>
+    <string name="input_value">Ввести значение</string>
+    <string name="try_to_guess">Попробуй угадать число.</string>
 </resources>

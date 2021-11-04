@@ -11,26 +11,28 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_baseline_tag_faces_24"
+        android:background="@drawable/smallpc"
         android:layout_above="@id/helloTv"
         android:layout_marginBottom="80dp"/>
 
     <TextView
         android:id="@+id/helloTv"
-        android:layout_width="wrap_content"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textColor="@color/black"
         android:gravity="center"
-        android:text="Привет! Я компьютер и я хочу с тобой поиграть!!!"
-        android:textSize="18sp" />
+        android:text='Привет! Я компьютер «Small».
+        И я хочу с тобой поиграть!!!'
+        android:textColor="#3DA5F8"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/gameBt"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:text="Играть!"
-        android:textColor="@color/black"
+        android:textColor="#323232"
         android:textAllCaps="false"
         android:layout_below="@id/helloTv"
         android:layout_marginTop="35dp"

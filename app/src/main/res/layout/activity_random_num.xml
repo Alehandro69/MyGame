@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomNum">
+
+
+    <RelativeLayout
+        android:id="@+id/toolBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Рандом"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/numberText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Укажи минимальное и максимальное значение."
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/minNum"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:hint="От"
+            android:inputType="number"
+            android:textColorHint="@color/blue" />
+c
+        <EditText
+            android:id="@+id/maxNum"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:layout_toEndOf="@+id/minNum"
+            android:gravity="center"
+            android:hint="До"
+            android:inputType="number"
+            android:textColorHint="@color/blue" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/randomBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
+        android:hint="Рандом"
+        android:textColorHint="@color/white" />
+
+
+</RelativeLayout>

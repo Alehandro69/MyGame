@@ -32,7 +32,6 @@
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:text="Играть!"
-        android:textColor="#323232"
         android:textAllCaps="false"
         android:layout_below="@id/helloTv"
         android:layout_marginTop="35dp"

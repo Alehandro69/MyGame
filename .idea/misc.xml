@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/drawable/casino_black_24dp.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/drawable/ic_add_a_photo_black_24dp.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/drawable/ic_baseline_tag_faces_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/drawable/ic_outline_casino_24.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/layout/activity_game.xml" value="0.3625" />
         <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/layout/activity_guess_the_number.xml" value="0.3625" />
         <entry key="..\:/Users/wiind/AndroidStudioProjects/MyGame/app/src/main/res/layout/activity_main.xml" value="0.3625" />

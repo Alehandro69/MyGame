@@ -6,73 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/smallIv"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/smallpc"
-        android:layout_above="@id/helloTv"
-        android:layout_marginBottom="80dp"/>
 
-    <TextView
-        android:id="@+id/helloTv"
-        android:layout_width="325dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text='Привет! Я компьютер «Small».
-        И я хочу с тобой поиграть!!!'
-        android:textColor="#3DA5F8"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/gameBt"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="Играть!"
-        android:textAllCaps="false"
-        android:layout_below="@id/helloTv"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabThree"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_audiotrack_black_24dp" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_subway_black_24dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabMain"
@@ -81,7 +26,38 @@
             android:layout_margin="4dp"
             android:tint="@android:color/white"
             app:fabSize="normal"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:tint="@android:color/white"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_outline_font_download_24" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:tint="@android:color/white"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_baseline_123_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:tint="@android:color/white"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_outline_casino_24"/>
+
 
 
     </LinearLayout>

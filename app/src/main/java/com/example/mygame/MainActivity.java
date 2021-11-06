@@ -13,10 +13,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button gameBt;
 
     FloatingActionButton fabMain, fabOne, fabTwo, fabThree;
-    Float translationY = 100f;
+    Float translationY = -100f;
 
     OvershootInterpolator interpolator = new OvershootInterpolator();
 
@@ -29,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        gameBt = findViewById(R.id.gameBt);
 
         fabMain = findViewById(R.id.fabMain);
         fabOne = findViewById(R.id.fabOne);
@@ -50,13 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fabTwo.setOnClickListener(this);
         fabThree.setOnClickListener(this);
 
-        gameBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GameActivity.class);
-                MainActivity.this.startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -81,10 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.fabTwo:
-                Log.i(TAG, "onClick: fab two");
+                Intent intent = new Intent(MainActivity.this, GuessTheNumberActivity.class);
+                MainActivity.this.startActivity(intent);
                 break;
             case R.id.fabThree:
-                Log.i(TAG, "onClick: fab three");
+
                 break;
         }
 
@@ -93,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void openMenu() {
         isMenuOpen = !isMenuOpen;
 
-        fabMain.animate().setInterpolator(interpolator).rotation(45f).setDuration(300).start();
+        fabMain.animate().setInterpolator(interpolator).rotation(90f).setDuration(300).start();
 
         fabOne.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
         fabTwo.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();

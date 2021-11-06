@@ -1,23 +1,27 @@
 package com.example.mygame;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
-import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    FloatingActionButton fabMain, fabOne, fabTwo, fabThree;
+    FloatingActionButton fabMain, randomText, randomNum, randomCasino;
     Float translationY = -100f;
 
     OvershootInterpolator interpolator = new OvershootInterpolator();
+
+    TextRandomFragment frag1;
+    NumberRandomFragment frag2;
+    CasinoRandomFragment frag3;
+    FragmentTransaction fTrans;
 
     private static final String TAG = "MainActivity";
 
@@ -29,29 +33,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        frag1 = new TextRandomFragment();
+        frag2 = new NumberRandomFragment();
+        frag3 = new CasinoRandomFragment();
+
         fabMain = findViewById(R.id.fabMain);
-        fabOne = findViewById(R.id.fabOne);
-        fabTwo = findViewById(R.id.fabTwo);
-        fabThree = findViewById(R.id.fabThree);
+        randomText = findViewById(R.id.randomText);
+        randomNum = findViewById(R.id.randomNum);
+        randomCasino = findViewById(R.id.randomCasino);
 
-        fabOne.setAlpha(0f);
-        fabTwo.setAlpha(0f);
-        fabThree.setAlpha(0f);
+        randomText.setAlpha(0f);
+        randomNum.setAlpha(0f);
+        randomCasino.setAlpha(0f);
 
-        fabOne.setTranslationY(translationY);
-        fabTwo.setTranslationY(translationY);
-        fabThree.setTranslationY(translationY);
+        randomText.setTranslationY(translationY);
+        randomNum.setTranslationY(translationY);
+        randomCasino.setTranslationY(translationY);
 
         fabMain.setOnClickListener(this);
-        fabOne.setOnClickListener(this);
-        fabTwo.setOnClickListener(this);
-        fabThree.setOnClickListener(this);
+        randomText.setOnClickListener(this);
+        randomNum.setOnClickListener(this);
+        randomCasino.setOnClickListener(this);
 
     }
 
+
+
     @Override
     public void onClick(View view) {
-
+        fTrans = getSupportFragmentManager().beginTransaction();
         switch (view.getId()) {
             case R.id.fabMain:
                 Log.i(TAG, "onClick: fab main");
@@ -61,23 +71,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     openMenu();
                 }
                 break;
-            case R.id.fabOne:
-                Log.i(TAG, "onClick: fab one");
-                handleFabOne();
-                if (isMenuOpen) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
+            case R.id.randomText:
+                fTrans.replace(R.id.frgmCont, frag1);
+                /*fTrans.add(R.id.frgmCont, frag1);*/
                 break;
-            case R.id.fabTwo:
-                Intent intent = new Intent(MainActivity.this, GuessTheNumberActivity.class);
-                MainActivity.this.startActivity(intent);
+            case R.id.randomNum:
+                fTrans.replace(R.id.frgmCont, frag2);
                 break;
-            case R.id.fabThree:
-
+            case R.id.randomCasino:
+                fTrans.replace(R.id.frgmCont, frag3);
                 break;
         }
+        fTrans.commit();
 
     }
 
@@ -86,9 +91,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         fabMain.animate().setInterpolator(interpolator).rotation(90f).setDuration(300).start();
 
-        fabOne.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
-        fabTwo.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
-        fabThree.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
+        randomText.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
+        randomNum.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
+        randomCasino.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
 
 
     }
@@ -98,9 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         fabMain.animate().setInterpolator(interpolator).rotation(0f).setDuration(300).start();
 
-        fabOne.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
-        fabTwo.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
-        fabThree.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
+        randomText.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
+        randomNum.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
+        randomCasino.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
 
     }
 

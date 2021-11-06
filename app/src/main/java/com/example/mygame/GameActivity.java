@@ -39,7 +39,7 @@ public class GameActivity extends AppCompatActivity {
         RandomNum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GameActivity.this, RandomNum.class);
+                Intent intent = new Intent(GameActivity.this, RandomNumActivity.class);
                 GameActivity.this.startActivity(intent);
             }
         });

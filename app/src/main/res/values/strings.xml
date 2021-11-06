@@ -7,4 +7,6 @@
     <string name="play_more">Сыграть ещё</string>
     <string name="input_value">Ввести значение</string>
     <string name="try_to_guess">Попробуй угадать число.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGame.NoActionBar">
         <activity
-            android:name=".RandomNum"
+            android:name=".RandomNumActivity"
             android:exported="false" />
         <activity android:name=".GuessTheNumberActivity" />
         <activity android:name=".GameActivity" />

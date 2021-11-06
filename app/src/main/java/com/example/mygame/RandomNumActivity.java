@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class RandomNum extends AppCompatActivity {
+public class RandomNumActivity extends AppCompatActivity {
 
     private ImageView backIv;
     private TextView tvInfo;

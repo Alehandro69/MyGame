@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fTrans = getSupportFragmentManager().beginTransaction();
         switch (view.getId()) {
             case R.id.fabMain:
-                Log.i(TAG, "onClick: fab main");
                 if (isMenuOpen) {
                     closeMenu();
                 } else {
@@ -73,13 +72,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.randomText:
                 fTrans.replace(R.id.frgmCont, frag1);
+                if (isMenuOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
                 /*fTrans.add(R.id.frgmCont, frag1);*/
                 break;
             case R.id.randomNum:
                 fTrans.replace(R.id.frgmCont, frag2);
+                if (isMenuOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
                 break;
             case R.id.randomCasino:
                 fTrans.replace(R.id.frgmCont, frag3);
+                if (isMenuOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
                 break;
         }
         fTrans.commit();

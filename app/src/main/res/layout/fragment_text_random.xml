@@ -3,16 +3,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextRandomFragment"
-    android:background="#F44336">
+    tools:context=".TextRandomFragment">
+
+
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Текст"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/resulTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Resul"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <EditText
+                android:id="@+id/textEt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text1"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/textEt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text2"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/textEt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text3"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/textEt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text4"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/textEt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text5"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/textEt6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="text6"
+                android:textSize="20sp" />
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textEt3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="Go"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>

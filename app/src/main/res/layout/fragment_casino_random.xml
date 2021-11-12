@@ -3,17 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CasinoRandomFragment"
-    android:background="@color/teal_200">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CasinoRandomFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Кубик"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/dice"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dice_six_faces_1"
+            app:tint="@color/gary_03" />
+
+    </RelativeLayout>
 
 
 </FrameLayout>

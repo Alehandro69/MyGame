@@ -9,4 +9,6 @@
     <string name="try_to_guess">Попробуй угадать число.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Random">Рандом</string>
+    <string name="Res">Результат</string>
 </resources>

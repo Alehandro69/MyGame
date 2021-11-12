@@ -30,7 +30,7 @@
             android:layout_margin="4dp"
             android:tint="@android:color/white"
             app:fabSize="normal"
-            app:srcCompat="@drawable/ic_baseline_menu_24" />
+            app:srcCompat="@drawable/ic_round_menu_24" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -41,7 +41,7 @@
             android:tint="@android:color/white"
             android:visibility="gone"
             app:fabSize="mini"
-            app:srcCompat="@drawable/ic_outline_font_download_24" />
+            app:srcCompat="@drawable/ic_round_format_color_text_24" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -52,7 +52,7 @@
             android:tint="@android:color/white"
             android:visibility="gone"
             app:fabSize="mini"
-            app:srcCompat="@drawable/ic_baseline_123_24" />
+            app:srcCompat="@drawable/ic_outline_looks_one_24" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/randomCasino"

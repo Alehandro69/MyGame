@@ -1,5 +1,6 @@
 package com.example.mygame;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,10 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 
 public class TextRandomFragment extends Fragment {
@@ -24,6 +28,16 @@ public class TextRandomFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_text_random, null);
 
+        TextInputLayout textInputLayout1 = (TextInputLayout) v.findViewById(R.id.textInputLayout1);
+        TextInputLayout textInputLayout2 = (TextInputLayout) v.findViewById(R.id.textInputLayout2);
+        TextInputLayout textInputLayout3 = (TextInputLayout) v.findViewById(R.id.textInputLayout3);
+        TextInputLayout textInputLayout4 = (TextInputLayout) v.findViewById(R.id.textInputLayout4);
+        TextInputLayout textInputLayout5 = (TextInputLayout) v.findViewById(R.id.textInputLayout5);
+        TextInputLayout textInputLayout6 = (TextInputLayout) v.findViewById(R.id.textInputLayout6);
+        TextInputLayout textInputLayout7 = (TextInputLayout) v.findViewById(R.id.textInputLayout7);
+        TextInputLayout textInputLayout8 = (TextInputLayout) v.findViewById(R.id.textInputLayout8);
+        TextInputLayout textInputLayout9 = (TextInputLayout) v.findViewById(R.id.textInputLayout9);
+        TextInputLayout textInputLayout10 = (TextInputLayout) v.findViewById(R.id.textInputLayout10);
         TextView resulTv = (TextView) v.findViewById(R.id.resulTv);
         EditText textEt1 = (EditText) v.findViewById(R.id.textEt1);
         EditText textEt2 = (EditText) v.findViewById(R.id.textEt2);
@@ -60,8 +74,8 @@ public class TextRandomFragment extends Fragment {
         quantity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
                 button2.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -69,9 +83,9 @@ public class TextRandomFragment extends Fragment {
         quantity3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
                 button3.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -79,10 +93,10 @@ public class TextRandomFragment extends Fragment {
         quantity4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
                 button4.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -90,11 +104,11 @@ public class TextRandomFragment extends Fragment {
         quantity5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
                 button5.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -102,12 +116,12 @@ public class TextRandomFragment extends Fragment {
         quantity6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
-                textEt6.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
+                textInputLayout6.setVisibility(View.VISIBLE);
                 button6.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -115,13 +129,13 @@ public class TextRandomFragment extends Fragment {
         quantity7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
-                textEt6.setVisibility(View.VISIBLE);
-                textEt7.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
+                textInputLayout6.setVisibility(View.VISIBLE);
+                textInputLayout7.setVisibility(View.VISIBLE);
                 button7.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -129,14 +143,14 @@ public class TextRandomFragment extends Fragment {
         quantity8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
-                textEt6.setVisibility(View.VISIBLE);
-                textEt7.setVisibility(View.VISIBLE);
-                textEt8.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
+                textInputLayout6.setVisibility(View.VISIBLE);
+                textInputLayout7.setVisibility(View.VISIBLE);
+                textInputLayout8.setVisibility(View.VISIBLE);
                 button8.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -144,15 +158,15 @@ public class TextRandomFragment extends Fragment {
         quantity9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
-                textEt6.setVisibility(View.VISIBLE);
-                textEt7.setVisibility(View.VISIBLE);
-                textEt8.setVisibility(View.VISIBLE);
-                textEt9.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
+                textInputLayout6.setVisibility(View.VISIBLE);
+                textInputLayout7.setVisibility(View.VISIBLE);
+                textInputLayout8.setVisibility(View.VISIBLE);
+                textInputLayout9.setVisibility(View.VISIBLE);
                 button9.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }
@@ -160,16 +174,16 @@ public class TextRandomFragment extends Fragment {
         quantity10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textEt1.setVisibility(View.VISIBLE);
-                textEt2.setVisibility(View.VISIBLE);
-                textEt3.setVisibility(View.VISIBLE);
-                textEt4.setVisibility(View.VISIBLE);
-                textEt5.setVisibility(View.VISIBLE);
-                textEt6.setVisibility(View.VISIBLE);
-                textEt7.setVisibility(View.VISIBLE);
-                textEt8.setVisibility(View.VISIBLE);
-                textEt9.setVisibility(View.VISIBLE);
-                textEt10.setVisibility(View.VISIBLE);
+                textInputLayout1.setVisibility(View.VISIBLE);
+                textInputLayout2.setVisibility(View.VISIBLE);
+                textInputLayout3.setVisibility(View.VISIBLE);
+                textInputLayout4.setVisibility(View.VISIBLE);
+                textInputLayout5.setVisibility(View.VISIBLE);
+                textInputLayout6.setVisibility(View.VISIBLE);
+                textInputLayout7.setVisibility(View.VISIBLE);
+                textInputLayout8.setVisibility(View.VISIBLE);
+                textInputLayout9.setVisibility(View.VISIBLE);
+                textInputLayout10.setVisibility(View.VISIBLE);
                 button10.setVisibility(View.VISIBLE);
                 quantity.setVisibility(View.GONE);
             }

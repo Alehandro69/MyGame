@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CasinoRandomFragment frag3;
     FragmentTransaction fTrans;
 
-    private static final String TAG = "MainActivity";
-
     Boolean isMenuOpen = false;
 
 
@@ -50,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         randomNum.setTranslationY(translationY);
         randomCasino.setTranslationY(translationY);
 
+
+
         fabMain.setOnClickListener(this);
         randomText.setOnClickListener(this);
         randomNum.setOnClickListener(this);
@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         fTrans = getSupportFragmentManager().beginTransaction();
+        randomText.setVisibility(View.VISIBLE);
+        randomNum.setVisibility(View.VISIBLE);
+        randomCasino.setVisibility(View.VISIBLE);
         switch (view.getId()) {
             case R.id.fabMain:
                 if (isMenuOpen) {
@@ -72,28 +75,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.randomText:
                 fTrans.replace(R.id.frgmCont, frag1);
-                if (isMenuOpen) {
                     closeMenu();
-                } else {
-                    openMenu();
-                }
-                /*fTrans.add(R.id.frgmCont, frag1);*/
+                randomText.setVisibility(View.GONE);
+                randomNum.setVisibility(View.GONE);
+                randomCasino.setVisibility(View.GONE);
                 break;
             case R.id.randomNum:
                 fTrans.replace(R.id.frgmCont, frag2);
-                if (isMenuOpen) {
                     closeMenu();
-                } else {
-                    openMenu();
-                }
+                randomText.setVisibility(View.GONE);
+                randomNum.setVisibility(View.GONE);
+                randomCasino.setVisibility(View.GONE);
                 break;
             case R.id.randomCasino:
                 fTrans.replace(R.id.frgmCont, frag3);
-                if (isMenuOpen) {
                     closeMenu();
-                } else {
-                    openMenu();
-                }
+                randomText.setVisibility(View.GONE);
+                randomNum.setVisibility(View.GONE);
+                randomCasino.setVisibility(View.GONE);
                 break;
         }
         fTrans.commit();
@@ -121,9 +120,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         randomNum.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
         randomCasino.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
 
-    }
-
-    private void handleFabOne() {
-        Log.i(TAG, "handleFabOne: ");
     }
 }

@@ -12,6 +12,13 @@
         android:layout_height="match_parent" />
 
     <!--menu-->
+    <View
+        android:id="@+id/fabBGLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A1FFFFFF"
+        android:visibility="gone" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +26,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center_horizontal"
+        android:gravity="end"
         android:orientation="vertical">
 
 
@@ -33,37 +40,97 @@
             app:srcCompat="@drawable/ic_round_menu_24" />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <LinearLayout
             android:id="@+id/randomText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            android:visibility="gone"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_round_format_color_text_24" />
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Список"
+                android:textColor="@color/gary_03"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/randomText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@android:color/white"
+                android:layout_margin="4dp"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_round_format_color_text_24" />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/randomNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            android:visibility="gone"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_outline_looks_one_24" />
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical"
+            >
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Числа"
+                android:textColor="@color/gary_03"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/randomNum1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@android:color/white"
+                android:layout_margin="4dp"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_outline_looks_one_24" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/randomCasino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            android:visibility="gone"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_outline_casino_24" />
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical"
+            >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Кубик"
+                android:textColor="@color/gary_03"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/randomCasino1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@android:color/white"
+                android:layout_margin="4dp"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_outline_casino_24" />
+
+
+        </LinearLayout>
+
+        <!--randomNum randomCasino-->
 
     </LinearLayout>
 

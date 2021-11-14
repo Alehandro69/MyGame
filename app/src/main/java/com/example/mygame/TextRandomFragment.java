@@ -30,7 +30,9 @@ public class TextRandomFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_text_random, null);
 
-        TextInputLayout textInputLayout1 = (TextInputLayout) v.findViewById(R.id.textInputLayout1);
+/*
+
+       TextInputLayout textInputLayout1 = (TextInputLayout) v.findViewById(R.id.textInputLayout1);
         TextInputLayout textInputLayout2 = (TextInputLayout) v.findViewById(R.id.textInputLayout2);
         TextInputLayout textInputLayout3 = (TextInputLayout) v.findViewById(R.id.textInputLayout3);
         TextInputLayout textInputLayout4 = (TextInputLayout) v.findViewById(R.id.textInputLayout4);
@@ -71,7 +73,6 @@ public class TextRandomFragment extends Fragment {
         Button quantity10 = (Button) v.findViewById(R.id.quantity10);
         ScrollView quantity = (ScrollView) v.findViewById(R.id.quantity);
         ScrollView scrollView = (ScrollView) v.findViewById(R.id.scrollView);
-
 
         quantity2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -344,7 +345,7 @@ public class TextRandomFragment extends Fragment {
                 resulTv.setText(myString[n]);
             }
         });
-
+*/
 
 
         return v;

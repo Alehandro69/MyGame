@@ -3,136 +3,103 @@ package com.example.mygame;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.OvershootInterpolator;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.mygame.fragment.CardRandomFragment;
+import com.example.mygame.fragment.CasinoRandomFragment;
+import com.example.mygame.fragment.CoinRandomFragment;
+import com.example.mygame.fragment.NumberRandomFragment;
+import com.example.mygame.fragment.SymbolRandomFragment;
+import com.example.mygame.fragment.TextRandomFragment;
+import com.example.mygame.fragment.YesOrNotRandomFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private ImageView randomText, randomNum, randomCasino, randomCard, randomMovie, randomMusic,
+            randomYesOrNot, randomSymbol, randomCoin, randomDate, randomContact, randomCountry;
 
-    LinearLayout randomText, randomNum, randomCasino;
-    FloatingActionButton fabMain,  randomText1, randomNum1, randomCasino1;
-    Float translationY = -100f;
-
-    OvershootInterpolator interpolator = new OvershootInterpolator();
-
-    TextRandomFragment frag1;
-    NumberRandomFragment frag2;
-    CasinoRandomFragment frag3;
-    FragmentTransaction fTrans;
-
-    Boolean isMenuOpen = false;
-
-    private View fabBGLayout;
-
+    private ScrollView menuSv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        frag1 = new TextRandomFragment();
-        frag2 = new NumberRandomFragment();
-        frag3 = new CasinoRandomFragment();
+        menuSv = findViewById(R.id.menuSv);
 
-        fabMain = findViewById(R.id.fabMain);
-        fabBGLayout = findViewById(R.id.fabBGLayout);
         randomText = findViewById(R.id.randomText);
         randomNum = findViewById(R.id.randomNum);
         randomCasino = findViewById(R.id.randomCasino);
+        randomCard = findViewById(R.id.randomCard);
+        randomYesOrNot = findViewById(R.id.randomYesOrNot);
+        randomCoin = findViewById(R.id.randomCoin);
+        randomSymbol = findViewById(R.id.randomSymbol);
+        randomDate = findViewById(R.id.randomDate);
+        randomCountry = findViewById(R.id.randomCountry);
 
-        randomText1 = findViewById(R.id.randomText1);
-        randomNum1 = findViewById(R.id.randomNum1);
-        randomCasino1 = findViewById(R.id.randomCasino1);
-
-        randomText.setAlpha(0f);
-        randomNum.setAlpha(0f);
-        randomCasino.setAlpha(0f);
-
-        randomText.setTranslationY(translationY);
-        randomNum.setTranslationY(translationY);
-        randomCasino.setTranslationY(translationY);
-
-        fabMain.setOnClickListener(this);
         randomText.setOnClickListener(this);
         randomNum.setOnClickListener(this);
         randomCasino.setOnClickListener(this);
-
-        randomText1.setOnClickListener(this);
-        randomNum1.setOnClickListener(this);
-        randomCasino1.setOnClickListener(this);
-
+        randomCard.setOnClickListener(this);
+        randomYesOrNot.setOnClickListener(this);
+        randomCoin.setOnClickListener(this);
+        randomSymbol.setOnClickListener(this);
+        randomDate.setOnClickListener(this);
+        randomCountry.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        fTrans = getSupportFragmentManager().beginTransaction();
-        randomText.setVisibility(View.VISIBLE);
-        fabBGLayout.setVisibility(View.VISIBLE);
-        randomText.setVisibility(View.VISIBLE);
-        randomNum.setVisibility(View.VISIBLE);
-        randomCasino.setVisibility(View.VISIBLE);
         switch (view.getId()) {
-            case R.id.fabMain:
-                if (isMenuOpen) {
-                    closeMenu();
-                    fabBGLayout.setVisibility(View.GONE);
-                } else {
-                    openMenu();
-                }
+            case R.id.randomText:
+                Intent intent1 = new Intent(MainActivity.this, ContentActivity.class);
+                intent1.putExtra("Fragment", "frag1");
+                startActivity(intent1);
                 break;
-            case R.id.randomText1:
-                fTrans.replace(R.id.frgmCont, frag1);
-                    closeMenu();
-                randomText.setVisibility(View.GONE);
-                fabBGLayout.setVisibility(View.GONE);
-                randomNum.setVisibility(View.GONE);
-                randomCasino.setVisibility(View.GONE);
+            case R.id.randomNum:
+                Intent intent2 = new Intent(MainActivity.this, ContentActivity.class);
+                intent2.putExtra("Fragment", "frag2");
+                startActivity(intent2);
                 break;
-            case R.id.randomNum1:
-                fTrans.replace(R.id.frgmCont, frag2);
-                    closeMenu();
-                randomText.setVisibility(View.GONE);
-                fabBGLayout.setVisibility(View.GONE);
-                randomNum.setVisibility(View.GONE);
-                randomCasino.setVisibility(View.GONE);
+            case R.id.randomCasino:
+                Intent intent3 = new Intent(MainActivity.this, ContentActivity.class);
+                intent3.putExtra("Fragment", "frag3");
+                startActivity(intent3);
                 break;
-            case R.id.randomCasino1:
-                fTrans.replace(R.id.frgmCont, frag3);
-                    closeMenu();
-                randomText.setVisibility(View.GONE);
-                fabBGLayout.setVisibility(View.GONE);
-                randomNum.setVisibility(View.GONE);
-                randomCasino.setVisibility(View.GONE);
+            case R.id.randomCard:
+                Intent intent4 = new Intent(MainActivity.this, ContentActivity.class);
+                intent4.putExtra("Fragment", "frag4");
+                startActivity(intent4);
+                break;
+            case R.id.randomYesOrNot:
+                Intent intent5 = new Intent(MainActivity.this, ContentActivity.class);
+                intent5.putExtra("Fragment", "frag5");
+                startActivity(intent5);
+                break;
+            case R.id.randomCoin:
+                Intent intent6 = new Intent(MainActivity.this, ContentActivity.class);
+                intent6.putExtra("Fragment", "frag6");
+                startActivity(intent6);
+                break;
+            case R.id.randomSymbol:
+                Intent intent7 = new Intent(MainActivity.this, ContentActivity.class);
+                intent7.putExtra("Fragment", "frag7");
+                startActivity(intent7);
+                break;
+            case R.id.randomDate:
+                Intent intent8 = new Intent(MainActivity.this, ContentActivity.class);
+                intent8.putExtra("Fragment", "frag8");
+                startActivity(intent8);
+                break;
+            case R.id.randomCountry:
+                Intent intent9 = new Intent(MainActivity.this, ContentActivity.class);
+                intent9.putExtra("Fragment", "frag9");
+                startActivity(intent9);
                 break;
         }
-        fTrans.commit();
-
-    }
-
-    private void openMenu() {
-        isMenuOpen = !isMenuOpen;
-
-        fabMain.animate().setInterpolator(interpolator).rotation(90f).setDuration(300).start();
-
-        randomText.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
-        randomNum.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
-        randomCasino.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
-
-
-    }
-
-    private void closeMenu() {
-        isMenuOpen = !isMenuOpen;
-
-        fabMain.animate().setInterpolator(interpolator).rotation(0f).setDuration(300).start();
-
-        randomText.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
-        randomNum.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
-        randomCasino.animate().translationY(translationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
-
     }
 }

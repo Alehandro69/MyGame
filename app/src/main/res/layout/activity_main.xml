@@ -6,135 +6,205 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/frgmCont"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-    <!--menu-->
-    <View
-        android:id="@+id/fabBGLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#A1FFFFFF"
-        android:visibility="gone" />
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="end"
-        android:orientation="vertical">
+        android:layout_margin="16dp"
+        android:text="@string/Random"
+        android:textColor="@color/gary_03"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:tint="@android:color/white"
-            app:fabSize="normal"
-            app:srcCompat="@drawable/ic_round_menu_24" />
-
+    <ScrollView
+        android:id="@+id/menuSv"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/randomText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:visibility="visible"
-            android:layout_marginRight="4dp"
-            android:gravity="center_vertical"
-            >
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/titleOne"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="Список"
-                android:textColor="@color/gary_03"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/randomText1"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/randomText"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/description"/>
+
+                <ImageView
+                    android:id="@+id/randomNum"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/number"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/titleTwo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tint="@android:color/white"
-                android:layout_margin="4dp"
-                app:fabSize="mini"
-                app:srcCompat="@drawable/ic_round_format_color_text_24" />
+                android:layout_below="@+id/titleOne"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
+                <ImageView
+                    android:id="@+id/randomCasino"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/box"
+                    />
+
+                <ImageView
+                    android:id="@+id/randomCard"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/card"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/titleThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTwo"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/randomMovie"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/movie"/>
+
+                <ImageView
+                    android:id="@+id/randomMusic"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/music"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/titleFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleThree"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/randomYesOrNot"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/yesornot"/>
+
+                <ImageView
+                    android:id="@+id/randomSymbol"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/symbol"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/titleFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleFour"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/randomCoin"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/coin"/>
+
+                <ImageView
+                    android:id="@+id/randomDate"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/date"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/titleSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleFive"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/randomContact"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/contact"/>
+
+                <ImageView
+                    android:id="@+id/randomCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/fly"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/randomNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:visibility="visible"
-            android:layout_marginRight="4dp"
-            android:gravity="center_vertical"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="Числа"
-                android:textColor="@color/gary_03"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/randomNum1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tint="@android:color/white"
-                android:layout_margin="4dp"
-                app:fabSize="mini"
-                app:srcCompat="@drawable/ic_outline_looks_one_24" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/randomCasino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="4dp"
-            android:visibility="visible"
-            android:gravity="center_vertical"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="Кубик"
-                android:textColor="@color/gary_03"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/randomCasino1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tint="@android:color/white"
-                android:layout_margin="4dp"
-                app:fabSize="mini"
-                app:srcCompat="@drawable/ic_outline_casino_24" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+    </ScrollView>
 
 </RelativeLayout>

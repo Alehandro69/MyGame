@@ -3,420 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextRandomFragment">
-
+    tools:context=".fragment.TextRandomFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <ScrollView
-            android:id="@+id/quantity"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_alignParentBottom="true">
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/quantity2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="6"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="7"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="8"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="9"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-                    <Button
-                        android:id="@+id/quantity10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10"
-                        android:layout_margin="5dp"
-                        android:textSize="32sp" />
-
-
-                </LinearLayout>
-
-
-            </HorizontalScrollView>
-
-
-
-        </ScrollView>
-
         <TextView
-            android:id="@+id/resulTv"
+            android:id="@+id/resultTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/Res"
-            android:textSize="22sp"
-            android:visibility="gone" />
+            android:gravity="center"
+            android:textColor="@color/gary_03"
+            android:textSize="22sp" />
 
-        <ScrollView
-            android:id="@+id/scrollView"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="155dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="65dp"
-            android:layout_centerInParent="true">
+            android:layout_above="@+id/randomBt"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:hint="@string/Enter">
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:inputType="text"
+                android:textAllCaps="false" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout1"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 1">
+        </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout2"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 2">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout3"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 3">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout4"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 4">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 5">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout6"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 6">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout7"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 7">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout8"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 8">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout9"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 9">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout10"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:visibility="gone"
-                    android:hint="Слово 10">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textEt10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <RelativeLayout
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/randomBt"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="55dp">
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/Generation"
+            android:textColorHint="@color/white" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:hint="@string/Random"
-                android:textColorHint="@color/white"
-                android:visibility="gone" />
-
-        </RelativeLayout>
 
     </RelativeLayout>
 

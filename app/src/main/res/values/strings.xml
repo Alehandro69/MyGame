@@ -1,14 +1,18 @@
 <resources>
-    <string name="app_name">MyGame</string>
-    <string name="guessTheNumber">Угадай число</string>
-    <string name="ahead">Слишком много.</string>
-    <string name="behind">Слишком мало.</string>
-    <string name="hit">Ура!! Ты угадал.</string>
+    <string name="app_name">Random case</string>
     <string name="play_more">Сыграть ещё</string>
-    <string name="input_value">Ввести значение</string>
-    <string name="try_to_guess">Попробуй угадать число.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Generation">Сгенерировать</string>
     <string name="Random">Рандом</string>
     <string name="Res">Результат</string>
+    <string name="Music">Музыка</string>
+    <string name="Movie">Фильмы</string>
+    <string name="Card">Карты</string>
+    <string name="Box">Кубик</string>
+    <string name="Enter">Введите слова через пробел</string>
+    <string name="Day">День</string>
+    <string name="Time">Время</string>
+    <string name="Date">Дата</string>
+    <string name="month">Месяц</string>
 </resources>
